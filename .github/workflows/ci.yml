@@ -4,11 +4,9 @@
 name: NodeJS Test workflow on workflow_dispatch
 
 on:
-  workflow_dispatch:
-    inputs:
-      commit_sha:
-        description: 'The full commit id to build'
-        required: true
+  push:
+    branches:
+      - master
 
 jobs:
   comment-run:
